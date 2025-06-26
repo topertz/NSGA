@@ -1,0 +1,17 @@
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\obj\Debug\net6.0-windows\NSGA.csproj.GenerateResource.cache
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\obj\Debug\net6.0-windows\NSGA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\obj\Debug\net6.0-windows\NSGA.AssemblyInfoInputs.cache
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\obj\Debug\net6.0-windows\NSGA.AssemblyInfo.cs
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\obj\Debug\net6.0-windows\NSGA.csproj.CoreCompileInputs.cache
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\bin\Debug\net6.0-windows\NSGA.exe
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\bin\Debug\net6.0-windows\NSGA.deps.json
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\bin\Debug\net6.0-windows\NSGA.runtimeconfig.json
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\bin\Debug\net6.0-windows\NSGA.dll
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\bin\Debug\net6.0-windows\NSGA.pdb
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\obj\Debug\net6.0-windows\NSGA.dll
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\obj\Debug\net6.0-windows\refint\NSGA.dll
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\obj\Debug\net6.0-windows\NSGA.pdb
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\obj\Debug\net6.0-windows\NSGA.genruntimeconfig.cache
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\obj\Debug\net6.0-windows\ref\NSGA.dll
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\obj\Debug\net6.0-windows\NSGAI.Form1.resources
+C:\Users\Mark\Documents\Visual Studio 2022\NSGA\NSGA\obj\Debug\net6.0-windows\NSGAII.Form2.resources

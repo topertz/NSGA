@@ -1,0 +1,136 @@
+Dokumentáció munkakiosztási probléma:
+
+A program célja egy többcélú optimalizálási probléma megoldása, amely a munkásokat egy adott számú munkadarab 
+elosztására rendeli úgy, hogy a cél az, hogy a munkadarabok minél olcsóbban és minél jobb minőségben készüljenek el. Az 
+optimalizálás két célja: minimális költség és minimális hibaarány.
+
+A program NSGA-II algoritmus segítségével talál Pareto-optimalitási megoldásokat, amelyek figyelembe veszik a két cél 
+összeegyeztethetetlenségét. A Pareto frontot grafikus és szöveges formában is megjeleníti.
+
+Bemenet:
+A program bemeneti fájl formátuma:
+
+N
+óradíj1,hibaszázalék1
+óradíj2,hibaszázalék2
+...
+óradíjN,hibaszázalékN
+N: A munkások száma.
+
+Minden további sorban egy munkás óradíja és hibaszázaléka szerepel, elválasztva vesszővel.
+
+Kimenet:
+
+A Pareto front grafikus ábrázolása, ahol az X tengely a költséget, Y tengely pedig a hibaarányt jelöli.
+
+A Pareto front szöveges listázása, amely tartalmazza a munkások elosztását, a költségeket és a hibát.
+
+Program Működése:
+
+Adatok betöltése:
+
+A program egy szöveges fájlban található munkás adatokat tölti be, amelyek tartalmazzák a munkások óradíját és hibaszázalékát.
+
+Kezdőpopuláció Létrehozása:
+
+A program kezdetben véletlenszerűen generál egy populációt, amely a munkadarabok elosztását tartalmazza a munkások között. 
+A munkadarabok száma rögzített (pl. 100), és a munka véletlenszerűen kerül kiosztásra a munkások között.
+
+NSGA-II Algoritmus:
+
+Az NSGA-II (Non-dominated Sorting Genetic Algorithm II) algoritmus a következő lépéseken keresztül dolgozik:
+
+Rangsorolás: Minden egyed (munkás kiosztás) rangsorolásra kerül a dominanciájuk alapján. A dominancia azt jelenti, 
+hogy egy egyed akkor dominálja a másikat, ha mindkét cél (költség és hiba) alacsonyabb vagy egyenlő nála.
+
+Szelektálás: 
+
+A TournamentSelection metódusban a jobb egyedek kerülnek kiválasztásra a következő generáció számára.
+
+Keresztezés és Mutáció: 
+
+A generációk között keresztezik és mutálják az egyedeket, hogy új megoldásokat találjanak. 
+A CrossoverAndMutate metódus a genetikai operátorok alkalmazását biztosítja.
+
+Értékelés:
+
+Minden egyed (kiosztás) értékelésre kerül azáltal, hogy kiszámítják a költséget (óradíj * munkadarabok száma) és a hibát 
+(hibaszázalék * munkadarabok száma).
+
+A EvaluatePopulation metódusban történik az egyedek költségeinek és hibáinak kiszámítása.
+
+Megjelenítés:
+
+A Pareto front grafikus ábrázolása a DrawParetoFront metódus segítségével történik, amely a költséget és a hibát ábrázolja az egyedek 
+eloszlásaként.
+
+A szöveges kimenet az egyes egyedek költségeit és hibáit jeleníti meg, a OutputParetoFront metódus segítségével.
+
+Munkás Kiosztás:
+
+A munkásokat egyedi elosztásokkal rendeljük hozzá a munkadarabokhoz. Az egyes elosztások a következő paraméterekkel rendelkeznek:
+
+Óradíj: 
+
+Munkás óradíja.
+
+Hibaszázalék: 
+
+Munkás hibaszázaléka.
+
+Allocation: 
+
+A munkás által elvégzett munkadarabok száma.
+
+Használt Algoritmusok:
+
+Pareto optimalitás: 
+
+Az algoritmus célja, hogy megtalálja azokat a megoldásokat, amelyek nem dominálhatók más megoldások által,
+tehát mindkét cél (költség és hiba) minimalizálva van.
+
+NSGA-II: 
+
+A program a Non-dominated Sorting Genetic Algorithm II (NSGA-II) módszert használja, amely egy genetikai algoritmus, 
+amely két cél optimalizálására lett kifejlesztve. A módszer a populációkat véletlenszerűen kezdi el, majd folyamatosan javítja a 
+megoldásokat keresztül-kasul történő mutációval és keresztül-hibridizált szülőkkel.
+
+Főbb Metódusok:
+
+LoadWorkers:
+ 
+Munkások adatainak betöltése a fájlból.
+
+InitializePopulation: 
+
+A kezdő populáció véletlenszerű generálása.
+
+EvaluatePopulation: 
+
+A populáció értékelése (költség és hibaarány számítása).
+
+AssignParetoRanks:
+
+ Pareto rangsorolás a dominancia alapján.
+
+TournamentSelection: 
+
+Kiválasztás a legjobb egyedek közül.
+
+CrossoverAndMutate: 
+
+Keresztezés és mutáció alkalmazása a generációk között.
+
+DrawParetoFront: 
+
+A Pareto front grafikus ábrázolása.
+
+OutputParetoFront: 
+
+A Pareto front szöveges formátumban történő kiírása.
+
+Megjegyzések:
+
+A program nem tartalmaz expliciten konvergencia alapú megállást, hanem a generációk számával (500) szabályozza a futás időtartamát.
+
+A mutáció és keresztül alkalmazott genetikai operátorok biztosítják, hogy a program új, innovatív munkás elosztásokat találjon.
